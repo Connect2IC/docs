@@ -1,0 +1,14 @@
+{
+    "position": 2.5,
+    "label": "Quick Start",
+    "collapsible": true,
+    "collapsed": false,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "Quick Start"
+    },
+    "customProps": {
+      "description": "Quick Start for Connect2IC in React-Native, Vue, Svelte"
+    }
+  }

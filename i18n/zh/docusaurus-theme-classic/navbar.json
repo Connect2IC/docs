@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "产品指南",
+    "description": "ME产品指南"
+  },
+  "item.label.Web": {
+    "message": "网页版",
+    "description": "网页版产品指南"
+  },
+  "item.label.Mobile App": {
+    "message": "移动端APP",
+    "description": "移动端APP产品指南"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "项目GitHub"
+  }
+}

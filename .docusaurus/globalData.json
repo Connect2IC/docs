@@ -1,0 +1,62 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "0.8",
+          "label": "0.8-beta",
+          "isLast": true,
+          "path": "/docs/0.8",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "API Reference",
+              "path": "/docs/0.8/API Reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/0.8/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quick_start/quick_start_rn",
+              "path": "/docs/0.8/quick_start/quick_start_rn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quick_start/quick_start_svelte",
+              "path": "/docs/0.8/quick_start/quick_start_svelte",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quick_start/quick_start_vue",
+              "path": "/docs/0.8/quick_start/quick_start_vue",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tech_spec",
+              "path": "/docs/0.8/tech_spec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/quick-start",
+              "path": "/docs/0.8/category/quick-start",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/0.8/intro",
+                "label": "version-0.8/intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

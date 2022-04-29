@@ -1,0 +1,24 @@
+{
+  "unversionedId": "quick_start/quick_start_svelte",
+  "id": "version-0.8/quick_start/quick_start_svelte",
+  "title": "Svelte",
+  "description": "TBD...",
+  "source": "@site/versioned_docs/version-0.8/02-quick_start/03-quick_start_svelte.md",
+  "sourceDirName": "02-quick_start",
+  "slug": "/quick_start/quick_start_svelte",
+  "permalink": "/docs/0.8/quick_start/quick_start_svelte",
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/versioned_docs/version-0.8/02-quick_start/03-quick_start_svelte.md",
+  "tags": [],
+  "version": "0.8",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Vue",
+    "permalink": "/docs/0.8/quick_start/quick_start_vue"
+  },
+  "next": {
+    "title": "Technical Specification",
+    "permalink": "/docs/0.8/tech_spec"
+  }
+}
