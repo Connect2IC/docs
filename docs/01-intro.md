@@ -14,7 +14,7 @@ Github repo: https://github.com/Connect2IC/connect2ic
 
 Currently the Connect2IC protocol is written in React for the frontends. Vue and Svelte will be supported soon as well.
 
-To quickly start with your Dapp, go to the [Quick Start](./02-Quick Start/01-quick_start_rn.md).
+To quickly start with your Dapp, go to the [Quick Start](./02-Quick_Start/01-quick_start_rn.md).
 
 To read more about the Connect2IC protocol, go to [Technical Specification](./03-tech_spec.md).
 
