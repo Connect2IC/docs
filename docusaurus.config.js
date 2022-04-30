@@ -9,7 +9,7 @@ const config = {
   title: 'Connect2IC',
   tagline: 'Connect2IC is an open protocol to aggregate a few widely used identity and wallet service of Internet Computer.',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/docs/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -39,18 +39,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          includeCurrentVersion: false,
-          lastVersion: '0.8',
-          versions: {
-          //   current: {
+          // includeCurrentVersion: false,
+          // lastVersion: '0.8',
+          // versions: {
+          // //   current: {
+          // //     label: '0.8-beta',
+          // //     path: '0.8',
+          // //   },
+          //   '0.8': {
           //     label: '0.8-beta',
           //     path: '0.8',
           //   },
-            '0.8': {
-              label: '0.8-beta',
-              path: '0.8',
-            },
-          },
+          // },
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -100,26 +100,26 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           },
-          {
-            type: 'docsVersionDropdown',
-            position: 'right',
-            // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-            dropdownActiveClassDisabled: true,
-          },
+          // {
+          //   type: 'docsVersionDropdown',
+          //   position: 'right',
+          //   // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+          //   dropdownActiveClassDisabled: true,
+          // },
         ],
       },
       footer: {
         style: 'dark',
         links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Connect2IC',
-          //       to: "/0.8/intro",
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Connect2IC',
+                to: '/docs/intro',
+              },
+            ],
+          },
           {
             title: 'Community',
             items: [
