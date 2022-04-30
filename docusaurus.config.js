@@ -9,7 +9,7 @@ const config = {
   title: 'Connect2IC',
   tagline: 'Connect2IC is an open protocol to aggregate a few widely used identity and wallet service of Internet Computer.',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
