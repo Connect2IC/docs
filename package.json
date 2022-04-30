@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://connect2ic.github.io/docs",
+  "homepage": "https://connect2ic.github.io/",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
