@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[656],{8201:function(t){t.exports=JSON.parse('{"title":"Quick Start","slug":"/category/quick-start","permalink":"/docs/category/quick-start","navigation":{"previous":{"title":"Connect2IC","permalink":"/docs/intro"},"next":{"title":"React","permalink":"/docs/Quick Start/quick_start_rn"}}}')}}]);
