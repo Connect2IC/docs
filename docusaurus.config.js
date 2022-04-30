@@ -9,7 +9,7 @@ const config = {
   title: 'Connect2IC',
   tagline: 'Connect2IC is an open protocol to aggregate a few widely used identity and wallet service of Internet Computer.',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -92,7 +92,7 @@ const config = {
             label: 'Connect2IC',
           },
           {
-            href: 'https://github.com/Connect2IC',
+            href: 'https://github.com/Connect2IC/connect2ic',
             label: 'GitHub',
             position: 'right',
           },
@@ -116,7 +116,7 @@ const config = {
             items: [
               {
                 label: 'Connect2IC',
-                to: '/docs/intro',
+                to: '/docs/docs/intro',
               },
             ],
           },
