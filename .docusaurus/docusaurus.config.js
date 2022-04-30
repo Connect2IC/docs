@@ -12,7 +12,8 @@ export default {
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
   "organizationName": "Connect2IC",
-  "projectName": "Connect2IC",
+  "projectName": "connet2ic.github.io",
+  "trailingSlash": false,
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -100,15 +101,6 @@ export default {
     "footer": {
       "style": "dark",
       "links": [
-        {
-          "title": "Docs",
-          "items": [
-            {
-              "label": "Connect2IC",
-              "to": "/docs/0.8/intro"
-            }
-          ]
-        },
         {
           "title": "Community",
           "items": [

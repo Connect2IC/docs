@@ -5,12 +5,11 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-// import { useLatestVersion } from "@docusaurus/plugin-content-docs/client";
-
-// const latestVersion = useLatestVersion().path;
+import { useLatestVersion } from "@docusaurus/plugin-content-docs/client";
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const latestVersion = useLatestVersion().path;
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -19,7 +18,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/0.8/intro">
+            to={`${latestVersion}/intro`}>
             Documentation
           </Link>
         </div>

@@ -1,11 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-// import { useLatestVersion } from "@docusaurus/plugin-content-docs/client";
-
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-// const latestVersion = useLatestVersion().path;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -17,7 +14,8 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Connect2IC', // Usually your GitHub org/user name.
-  projectName: 'Connect2IC', // Usually your repo name.
+  projectName: 'connet2ic.github.io', // Usually your repo name.
+  trailingSlash: false,
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -113,15 +111,15 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Connect2IC',
-                to: '/docs/0.8/intro',
-              },
-            ],
-          },
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'Connect2IC',
+          //       to: "/0.8/intro",
+          //     },
+          //   ],
+          // },
           {
             title: 'Community',
             items: [
