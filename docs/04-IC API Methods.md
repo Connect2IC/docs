@@ -1,3 +1,0 @@
-# IC API Methods
-## Introduction
-TBD...

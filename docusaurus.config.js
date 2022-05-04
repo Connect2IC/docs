@@ -1,29 +1,37 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github")
+const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 
-/** @type {import('@docusaurus/types').Config} */
+/** @type {import("@docusaurus/types").Config} */
 const config = {
-  title: 'Connect2IC',
-  tagline: 'Connect2IC is an open protocol to aggregate a few widely used identity and wallet service of Internet Computer.',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/docs/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'Connect2IC', // Usually your GitHub org/user name.
-  projectName: 'connet2ic.github.io', // Usually your repo name.
+  title: "Connect2IC",
+  tagline: "A frontend library & toolkit for the Internet Computer",
+  url: "connet2ic.github.io",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "Connect2IC", // Usually your GitHub org/user name.
+  projectName: "connect2ic", // Usually your repo name.
   trailingSlash: false,
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        // Options here
+      },
+    ],
+  ],
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
     localeConfigs: {
       en: {
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en-US',
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en-US",
       },
       // zh: {
       //   label: '简体中文',
@@ -35,8 +43,8 @@ const config = {
 
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      "classic",
+      /** @type {import("@docusaurus/preset-classic").Options} */
       ({
         docs: {
           // includeCurrentVersion: false,
@@ -51,103 +59,102 @@ const config = {
           //     path: '0.8',
           //   },
           // },
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
   ],
 
-  themeConfig: 
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  themeConfig:
+  /** @type {import("@docusaurus/preset-classic").ThemeConfig} */
     ({
       metadata: [
-        {name: 'title', content: 'Documentation'},
-        {name: 'description', content: 'Connect2IC is an open protocol to aggregate a few widely used identity and wallet service of Internet Computer'},
-        {name: 'keywords', content: 'Connect2IC, Internet Computer, Internet Identity, AstroX ME, Plug, Stoic, Infinity Wallet.'}
+        { name: "title", content: "Documentation" },
+        {
+          name: "description",
+          content: "Connect2IC is a frontend library",
+        },
+        {
+          name: "keywords",
+          content: "Connect2IC, Internet Computer, Internet Identity, AstroX ME, Plug, Stoic, Infinity Wallet.",
+        },
       ],
       navbar: {
-        title: 'Documentation',
-        // logo: {
-        //   alt: 'ME Logo',
-        //   src: 'img/logo.png',
-        //   width: 32,
-        //   height: 32,
-        // },
+        title: "Connect2IC",
+        logo: {
+          alt: 'ME Logo',
+          src: 'img/dfinity.svg',
+          width: 32,
+          height: 32,
+        },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Connect2IC',
+            href: "https://github.com/Connect2IC/connect2ic",
+            label: "Github",
+            position: "right",
           },
           {
-            href: 'https://github.com/Connect2IC/connect2ic',
-            label: 'GitHub',
-            position: 'right',
+            type: "localeDropdown",
+            position: "right",
           },
           {
-            type: 'localeDropdown',
-            position: 'right',
+            type: "search",
+            position: "right",
           },
           // {
-          //   type: 'docsVersionDropdown',
-          //   position: 'right',
-          //   // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+          //   type: "dropdown",
+          //   position: "right",
+          //   label: "Framework",
+          //   items: [
+          //     {
+          //       type: "doc",
+          //       label: "React",
+          //       docId: "intro",
+          //     },
+          //     {
+          //       type: "doc",
+          //       label: "Vue",
+          //       docId: "intro",
+          //     },
+          //     {
+          //       type: "doc",
+          //       label: "Svelte",
+          //       docId: "intro",
+          //     },
+          //   ],
           //   dropdownActiveClassDisabled: true,
           // },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Community",
             items: [
               {
-                label: 'Connect2IC',
-                to: '/docs/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/miamaruq',
+                label: "Twitter",
+                href: "https://twitter.com/miamaruq",
               },
               {
-                label: 'Discord',
-                href: 'https://discord.gg/Wn49abkhFU',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Agent Dart',
-                href: 'https://github.com/AstroxNetwork/agent_dart',
-              },
-              {
-                label: 'Candid Dart',
-                href: 'https://github.com/AstroxNetwork/candid_dart',
+                label: "Discord",
+                href: "https://discord.gg/Wn49abkhFU",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mio. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Mio Quispe`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -156,27 +163,27 @@ const config = {
       /*algolia: {
         // The application ID provided by Algolia
         appId: 'YOUR_APP_ID',
-  
+
         // Public API key: it is safe to commit it
         apiKey: 'YOUR_SEARCH_API_KEY',
-  
+
         indexName: 'YOUR_INDEX_NAME',
-  
+
         // Optional: see doc section below
         contextualSearch: true,
-  
+
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
         externalUrlRegex: 'external\\.com|domain\\.com',
-  
+
         // Optional: Algolia search parameters
         searchParameters: {},
-  
+
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: 'search',
-  
+
         //... other Algolia params
       },*/
     }),
-};
+}
 
-module.exports = config;
+module.exports = config
