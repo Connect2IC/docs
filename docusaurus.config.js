@@ -9,7 +9,7 @@ const config = {
   title: "Connect2IC",
   tagline: "A frontend auth library & toolkit for the Internet Computer",
   url: "https://connect2ic.github.io",
-  baseUrl: "/docs",
+  baseUrl: "/docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",

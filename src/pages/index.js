@@ -71,7 +71,7 @@ function HomepageHeader() {
             <div className={styles.buttons}>
               <Link
                 className="button button--primary button--outline button--lg"
-                to="/docs/React/quick_start_react">
+                to="/docs/docs/React/quick_start_react">
                 Get Started
               </Link>
               <span style={{ marginRight: "1rem" }} />
