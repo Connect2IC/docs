@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[712],{2867:function(e){e.exports=JSON.parse('{"title":"Connect2IC for React","slug":"/category/react","permalink":"/docs/category/react","navigation":{"previous":{"title":"Providers","permalink":"/docs/Core/Providers"},"next":{"title":"Getting started","permalink":"/docs/React/quick_start_react"}}}')}}]);
