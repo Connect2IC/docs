@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 const config = {
   title: "Connect2IC",
   tagline: "A frontend auth library & toolkit for the Internet Computer",
-  url: "connect2ic.github.io",
+  url: "https://connect2ic.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
