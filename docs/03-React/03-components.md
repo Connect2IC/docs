@@ -7,8 +7,17 @@ A pre-styled dialog
 ```jsx
 import { ConnectDialog } from "@connect2ic/react"
 
-<ConnectDialog dark={false} />
+function App() {
+  return (
+    <ConnectDialog dark={false} />
+  )
+}
 ```
+
+| Prop | Type | Description | Default |
+| -----|------|-------------|---------|
+| dark | boolean | Dark mode on or off | false |
+---------------------------------------
 
 ### Props
 
@@ -22,17 +31,20 @@ A pre-styled button for connecting & disconnecting
 ```jsx
 import { ConnectButton } from "@connect2ic/react"
 
-<ConnectButton 
-  dark={false}
-  onConnect={() => {/* connected */}}
-  onDisconnect={() => {/* disconnected */}}
-/>
+function App() {
+  return (
+    <ConnectButton
+      dark={false}
+      onConnect={() => {/* connected */}}
+      onDisconnect={() => {/* disconnected */}}
+    />
+  )
+}
 ```
 
-### Props
-
-#### dark
-
-#### onConnect
-
-#### onDisconnect
+| Prop | Type | Description | Default |
+| -----|------|-------------|---------|
+| dark | boolean | Dark mode on or off | false |
+| onConnect | function | Fires when the user has connected | undefined |
+| onDisconnect | function | Fires when the user has disconnected | undefined |
+---------------------------------------

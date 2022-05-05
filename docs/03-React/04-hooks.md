@@ -167,7 +167,7 @@ function App() {
     // string
     provider.name
 
-    // imgSrc
+    // <img /> src string
     provider.icon.light
     provider.icon.dark
 
@@ -176,4 +176,3 @@ function App() {
   })
 }
 ```
-

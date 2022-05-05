@@ -1,7 +1,5 @@
 # Getting started
 
-Following these steps will give you fully working auth with a prestyled `<ConnectButton />` and `<ConnectDialog />` 
-
 ## Installation
 
 ```
@@ -24,7 +22,7 @@ const AppRoot = () => (
     canisters={{
       counter,
     }}
-    connectors={defaultConnectors}
+    providers={defaultProviders}
   >
     <App />
   </Connect2ICProvider>
@@ -48,3 +46,8 @@ function App() {
 }
 
 ```
+
+
+## Done. Now customize it
+Explore the remaining sections for further customization. Most likely you will need the 
+[`useConnect()` hook](http://google.com) next.

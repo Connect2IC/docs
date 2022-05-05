@@ -7,8 +7,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 /** @type {import("@docusaurus/types").Config} */
 const config = {
   title: "Connect2IC",
-  tagline: "A frontend library & toolkit for the Internet Computer",
-  url: "connet2ic.github.io",
+  tagline: "A frontend auth library & toolkit for the Internet Computer",
+  url: "connect2ic.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -94,9 +94,9 @@ const config = {
         title: "Connect2IC",
         logo: {
           alt: 'ME Logo',
-          src: 'img/dfinity.svg',
+          src: 'img/connect2ic_logo_light.png',
           width: 32,
-          height: 32,
+          // height: 22,
         },
         items: [
           {

@@ -40,6 +40,7 @@
   --ifm-color-primary-light: white;
   --ifm-color-primary-lighter: white;
   --ifm-color-primary-lightest: white;
+  --ifm-heading-color: white;
   --ifm-code-font-size: 95%;
 }
 
@@ -52,4 +53,12 @@
 
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar__logo {
+  display: flex;
+  height: 100%;
+}
+.navbar__logo > img {
+  height: 22px;
 }
