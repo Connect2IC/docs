@@ -7,7 +7,8 @@ The top-level provider
 ### Usage
 
 ```jsx
-import { Plug, AstroX } from "@connect2ic/core"
+import { PlugWallet } from "@connect2ic/core/providers/plug-wallet"
+import { AstroX } from "@connect2ic/core/providers/astrox"
 import { Connect2ICProvider } from "@connect2ic/react"
 import * as myCanister from "dfx-generated/my-canister"
 
@@ -21,7 +22,7 @@ function App() {
 const providers = [
   // Either import them from @connect2ic/core
   AstroX,
-  Plug,
+  PlugWallet,
   // or create your own (check the existing ones to see how they're implemented)
 ]
 
