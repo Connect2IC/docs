@@ -4,14 +4,12 @@
 
 A pre-styled dialog
 
-```jsx
-import { ConnectDialog } from "@connect2ic/react"
+```html
+<script>
+  import { ConnectDialog } from "@connect2ic/svelte"
+</script>
 
-function App() {
-  return (
-    <ConnectDialog dark={false} />
-  )
-}
+<ConnectDialog dark={false} />
 ```
 
 | Prop | Type | Description | Default |
@@ -19,23 +17,20 @@ function App() {
 | dark | boolean | Dark mode on or off | false |
 ---------------------------------------
 
-
 ## ConnectButton
 
 A pre-styled button for connecting & disconnecting
 
-```jsx
-import { ConnectButton } from "@connect2ic/react"
+```html
+<script>
+  import { ConnectButton } from "@connect2ic/svelte"
+</script>
 
-function App() {
-  return (
-    <ConnectButton
-      dark={false}
-      onConnect={() => {/* connected */}}
-      onDisconnect={() => {/* disconnected */}}
-    />
-  )
-}
+<ConnectButton
+  dark={false}
+  onConnect={() => {/* connected */}}
+  onDisconnect={() => {/* disconnected */}}
+/>
 ```
 
 | Prop | Type | Description | Default |

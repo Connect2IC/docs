@@ -1,4 +1,4 @@
-# Hooks
+# Stores
 
 ## useConnect
 
@@ -6,10 +6,11 @@ Gives you access to many things like the status of the connection, which provide
 
 ### Usage
 
-```jsx
-import { useConnect } from "@connect2ic/react"
+```html
 
-function App() {
+<script>
+  import { useConnect } from "@connect2ic/svelte"
+
   const {
     principal,
     connect,
@@ -27,9 +28,8 @@ function App() {
       // Signed out
     }
   })
-
   // string
-  principal
+  $principal
 
   // connect
   connect()
@@ -38,20 +38,20 @@ function App() {
   disconnect()
 
   // boolean
-  isIdle
+  $isIdle
 
   // TODO
-  isConnecting
+  $isConnecting
 
   // boolean
-  isConnected
+  $isConnected
 
   // boolean
-  isDisconnecting
+  $isDisconnecting
 
-  // "inactive" | "idle" | "connecting" | "connected" | "disconnecting"
-  status
-}
+  // Provider
+  $activeProvider
+</script>
 ```
 
 ## useCanister
@@ -60,24 +60,25 @@ Automatically switches between the anonymous & connected identity for the canist
 
 ### Usage
 
-```jsx
-import { useCanister } from "@connect2ic/react"
+```html
 
-function App() {
+<script>
+  import { useCanister } from "@connect2ic/svelte"
+
   const [counter, { loading, error }] = useCanister("counter")
 
   // Make calls to the canister as you would normally
-  counter.increment()
+  $counter.increment()
 
   // boolean
-  loading
+  $loading
 
   // TODO
-  error
+  $error
 
   // Always use the non-signed in identity to make canister calls
   const [counter] = useCanister("counter", { mode: "anonymous" })
-}
+</script>
 ```
 
 ## useDialog
@@ -86,10 +87,11 @@ Programmatically control the prestyled `<Dialog />` or check its state.
 
 ### Usage
 
-```jsx
-import { useDialog } from "@connect2ic/react"
+```html
 
-function App() {
+<script>
+  import { useDialog } from "@connect2ic/svelte"
+
   const { open, close, isOpen } = useDialog()
 
   // opens the dialog
@@ -99,8 +101,9 @@ function App() {
   close()
 
   // true | false
-  isOpen
-}
+  $isOpen
+
+</script>
 ```
 
 ## useWallet
@@ -109,18 +112,19 @@ Wallet info and addresses.
 
 ### Usage
 
-```jsx
-import { useWallet } from "@connect2ic/react"
+```html
 
-function App() {
+<script>
+  import { useWallet } from "@connect2ic/svelte"
+
   const [wallet] = useWallet()
 
   // wallet | false
-  wallet
+  $wallet
 
   // string
-  wallet.principal
-}
+  $wallet.principal
+</script>
 ```
 
 ## useBalance
@@ -129,13 +133,14 @@ Provides you with a list of the users assets when a wallet is connected.
 
 ### Usage
 
-```jsx
-import { useBalance } from "@connect2ic/react"
+```html
 
-function App() {
+<script>
+  import { useBalance } from "@connect2ic/svelte"
+
   const [assets] = useBalance()
 
-  assets.map(asset => {
+  $assets?.map(asset => {
     // string
     asset.canisterId
 
@@ -145,7 +150,7 @@ function App() {
     // number
     asset.amount
   })
-}
+</script>
 ```
 
 ## useProviders
@@ -154,13 +159,14 @@ Gives you direct access to the providers, when you need more control.
 
 ### Usage
 
-```jsx
-import { useProviders } from "@connect2ic/react"
+```html
 
-function App() {
+<script>
+  import { useProviders } from "@connect2ic/svelte"
+
   const [providers] = useProviders()
 
-  providers.map(provider => {
+  $providers?.map(provider => {
     // string
     provider.id
 
@@ -174,5 +180,5 @@ function App() {
     // Connector
     provider.connector
   })
-}
+</script>
 ```

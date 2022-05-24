@@ -5,10 +5,16 @@ import Link from "@docusaurus/Link"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import { useColorMode } from "@docusaurus/theme-common"
 import styles from "./index.module.css"
-// import { defaultProviders } from "@connect2ic/core"
-// import { Connect2ICProvider, ConnectDialog, ConnectButton, useConnect } from "@connect2ic/react"
+// import Prism from 'prismjs'
+// import "prism-svelte"
+
+// import { defaultProviders } from "@connect2ic/core/providers"
+// import { Connect2ICProvider, ConnectDialog, useConnect, useDialog } from "@connect2ic/react"
 // import style from "@connect2ic/core/style.css"
-//
+// import { inspect } from "@xstate/inspect"
+
+// inspect({ iframe: false })
+
 // console.log(style)
 
 // import { useLatestVersion } from "@docusaurus/plugin-content-docs/client";
@@ -16,7 +22,8 @@ import styles from "./index.module.css"
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
   // const latestVersion = useLatestVersion().path;
-  // const { isConnected } = useConnect()
+  // const { isConnected, disconnect } = useConnect()
+  // const dialog = useDialog()
   const { colorMode } = useColorMode()
   const isDarkTheme = colorMode === "dark"
   return (
@@ -75,9 +82,10 @@ function HomepageHeader() {
                 Get Started
               </Link>
               <span style={{ marginRight: "1rem" }} />
-              {/*<ConnectButton className="button button--primary button--lg">*/}
-              {/*  {isConnected ? "Disconnect" : "Connect Demo"}*/}
-              {/*</ConnectButton>*/}
+              {/*<button onClick={() => isConnected ? disconnect() : dialog.open()}*/}
+              {/*        className="button button--primary button--lg">*/}
+              {/*  {isConnected ? "Disconnect" : "Open Demo"}*/}
+              {/*</button>*/}
 
             </div>
           </div>
@@ -155,17 +163,17 @@ function HomepageContent() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext()
   return (
+    // <Connect2ICProvider providers={defaultProviders} canisters={{}}>
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      {/*<Connect2ICProvider providers={defaultProviders} canisters={{}}>*/}
       <HomepageHeader />
       <main>
         {/*  <HomepageFeatures />*/}
         <HomepageContent />
       </main>
       {/*<ConnectDialog />*/}
-      {/*</Connect2ICProvider>*/}
     </Layout>
+    // </Connect2ICProvider>
   )
 }

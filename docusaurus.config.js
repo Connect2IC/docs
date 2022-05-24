@@ -79,6 +79,14 @@ const config = {
   themeConfig:
   /** @type {import("@docusaurus/preset-classic").ThemeConfig} */
     ({
+      // highlight: {
+      //   theme: "default",
+      //   hljs: (hljs) => {
+      //     hljs.registerLanguage("sveltehtml", (hljs) => {
+      //
+      //     })
+      //   },
+      // },
       metadata: [
         { name: "title", content: "Documentation" },
         {
