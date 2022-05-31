@@ -10,7 +10,7 @@ The top-level provider
 import { PlugWallet } from "@connect2ic/core/providers/plug-wallet"
 import { AstroX } from "@connect2ic/core/providers/astrox"
 import { Connect2ICProvider } from "@connect2ic/react"
-import * as myCanister from "dfx-generated/my-canister"
+import * as myCanister from "dfx-generated/myCanister"
 
 function App() {
   return (

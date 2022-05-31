@@ -1,4 +1,4 @@
-# Stores
+# Composables
 
 ## useConnect
 
@@ -7,9 +7,8 @@ Gives you access to many things like the status of the connection, which provide
 ### Usage
 
 ```html
-
-<script>
-  import { useConnect } from "@connect2ic/svelte"
+<script setup>
+  import { useConnect } from "@connect2ic/vue"
 
   const {
     principal,
@@ -29,7 +28,7 @@ Gives you access to many things like the status of the connection, which provide
     }
   })
   // string
-  $principal
+  principal.value
 
   // connect
   connect(providerId)
@@ -37,20 +36,20 @@ Gives you access to many things like the status of the connection, which provide
   // disconnect
   disconnect()
 
-  // boolean
-  $isIdle
+  // Ref<boolean>
+  isIdle.value
 
   // TODO
-  $isConnecting
+  isConnecting.value
 
-  // boolean
-  $isConnected
+  // Ref<boolean>
+  isConnected.value
 
-  // boolean
-  $isDisconnecting
+  // Ref<boolean>
+  isDisconnecting.value
 
   // Provider
-  $activeProvider
+  activeProvider.value
 </script>
 ```
 
@@ -61,20 +60,19 @@ Automatically switches between the anonymous & connected identity for the canist
 ### Usage
 
 ```html
-
-<script>
-  import { useCanister } from "@connect2ic/svelte"
+<script setup>
+  import { useCanister } from "@connect2ic/vue"
 
   const [counter, { loading, error }] = useCanister("counter")
 
   // Make calls to the canister as you would normally
-  $counter.increment()
+  counter.value.increment()
 
-  // boolean
-  $loading
+  // Ref<boolean>
+  loading.value
 
   // TODO
-  $error
+  error.value
 
   // Always use the non-signed in identity to make canister calls
   const [counter] = useCanister("counter", { mode: "anonymous" })
@@ -89,8 +87,8 @@ Programmatically control the prestyled `<Dialog />` or check its state.
 
 ```html
 
-<script>
-  import { useDialog } from "@connect2ic/svelte"
+<script setup>
+  import { useDialog } from "@connect2ic/vue"
 
   const { open, close, isOpen } = useDialog()
 
@@ -100,9 +98,8 @@ Programmatically control the prestyled `<Dialog />` or check its state.
   // closes the dialog
   close()
 
-  // true | false
-  $isOpen
-
+  // Ref<boolean>
+  isOpen.value
 </script>
 ```
 
@@ -113,17 +110,16 @@ Wallet info and addresses.
 ### Usage
 
 ```html
-
-<script>
-  import { useWallet } from "@connect2ic/svelte"
+<script setup>
+  import { useWallet } from "@connect2ic/vue"
 
   const [wallet] = useWallet()
 
-  // wallet | false
-  $wallet
+  // Ref<wallet>
+  wallet.value
 
   // string
-  $wallet.principal
+  wallet.value.principal
 </script>
 ```
 
@@ -134,13 +130,13 @@ Provides you with a list of the users assets when a wallet is connected.
 ### Usage
 
 ```html
-
-<script>
-  import { useBalance } from "@connect2ic/svelte"
+<script setup>
+  import { useBalance } from "@connect2ic/vue"
 
   const [assets] = useBalance()
 
-  $assets?.map(asset => {
+  // Ref<assets> | undefined
+  assets.value.map(asset => {
     // string
     asset.canisterId
 
@@ -160,13 +156,13 @@ Gives you direct access to the providers, when you need more control.
 ### Usage
 
 ```html
-
-<script>
-  import { useProviders } from "@connect2ic/svelte"
+<script setup>
+  import { useProviders } from "@connect2ic/vue"
 
   const [providers] = useProviders()
 
-  $providers?.map(provider => {
+  // Ref<Array<Provider>>
+  providers.value?.map(provider => {
     // string
     provider.id
 

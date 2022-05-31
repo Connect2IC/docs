@@ -32,7 +32,7 @@ function App() {
   principal
 
   // connect
-  connect()
+  connect(providerId)
 
   // disconnect
   disconnect()

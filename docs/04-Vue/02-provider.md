@@ -7,10 +7,10 @@ The top-level provider
 ### Usage
 
 ```html
-<script>
+<script setup>
   import { PlugWallet } from "@connect2ic/core/providers/plug-wallet"
   import { AstroX } from "@connect2ic/core/providers/astrox"
-  import { Connect2ICProvider } from "@connect2ic/svelte"
+  import { Connect2ICProvider } from "@connect2ic/vue"
   import * as myCanister from "canisters/myCanister"
   // List of providers
   const providers = [
@@ -30,13 +30,15 @@ The top-level provider
   const host = window.location.origin
 </script>
 
-<!-- Wrap your whole App with the Provider -->
-<Connect2ICProvider
-  canisters={canisterDefinitions}
-  providers={providers}
-  host={host}
->
-  <App />
-</Connect2ICProvider>
+<template>
+  <!-- Wrap your whole App with the Provider -->
+  <Connect2ICProvider
+    :canisters="canisterDefinitions"
+    :providers="providers"
+    :host="host"
+  >
+    <App />
+  </Connect2ICProvider>
+</template>
 ```
 
