@@ -14,6 +14,8 @@ function App() {
     principal,
     connect,
     disconnect,
+    status,
+    isInitializing,
     isIdle,
     isConnecting,
     isConnected,
@@ -34,8 +36,14 @@ function App() {
   // connect
   connect(providerId)
 
+  // "initializing" | "idle" | "connecting" | "connected" | "disconnecting"
+  status
+
   // disconnect
   disconnect()
+  
+  // boolean
+  isInitializing
 
   // boolean
   isIdle
@@ -48,9 +56,6 @@ function App() {
 
   // boolean
   isDisconnecting
-
-  // "inactive" | "idle" | "connecting" | "connected" | "disconnecting"
-  status
 }
 ```
 
@@ -133,7 +138,7 @@ Provides you with a list of the users assets when a wallet is connected.
 import { useBalance } from "@connect2ic/react"
 
 function App() {
-  const [assets] = useBalance()
+  const [assets, { refetch, error }] = useBalance()
 
   assets.map(asset => {
     // string
@@ -145,6 +150,12 @@ function App() {
     // number
     asset.amount
   })
+  
+  // refetch the balance
+  refetch()
+  
+  // Error
+  error
 }
 ```
 
@@ -160,19 +171,20 @@ import { useProviders } from "@connect2ic/react"
 function App() {
   const [providers] = useProviders()
 
+  // Array<Provider>
   providers.map(provider => {
+    // Provider
+    provider
+    
     // string
-    provider.id
+    provider.meta.id
 
     // string
-    provider.name
+    provider.meta.name
 
     // <img /> src string
-    provider.icon.light
-    provider.icon.dark
-
-    // Connector
-    provider.connector
+    provider.meta.icon.light
+    provider.meta.icon.dark
   })
 }
 ```

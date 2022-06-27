@@ -15,6 +15,8 @@ Gives you access to many things like the status of the connection, which provide
     principal,
     connect,
     disconnect,
+    status,
+    isInitializing,
     isIdle,
     isConnecting,
     isConnected,
@@ -36,6 +38,12 @@ Gives you access to many things like the status of the connection, which provide
 
   // disconnect
   disconnect()
+
+  // "initializing" | "idle" | "connecting" | "connected" | "disconnecting"
+  $status
+
+  // boolean
+  $isInitializing
 
   // boolean
   $isIdle
@@ -138,7 +146,7 @@ Provides you with a list of the users assets when a wallet is connected.
 <script>
   import { useBalance } from "@connect2ic/svelte"
 
-  const [assets] = useBalance()
+  const [assets, { refetch, error }] = useBalance()
 
   $assets?.map(asset => {
     // string
@@ -150,6 +158,12 @@ Provides you with a list of the users assets when a wallet is connected.
     // number
     asset.amount
   })
+
+  // refetch the balance
+  refetch()
+
+  // Error
+  $error
 </script>
 ```
 
@@ -166,19 +180,20 @@ Gives you direct access to the providers, when you need more control.
 
   const [providers] = useProviders()
 
+  // Array<Provider>
   $providers?.map(provider => {
+    // Provider
+    provider
+    
     // string
-    provider.id
+    provider.meta.id
 
     // string
-    provider.name
+    provider.meta.name
 
     // <img /> src string
-    provider.icon.light
-    provider.icon.dark
-
-    // Connector
-    provider.connector
+    provider.meta.icon.light
+    provider.meta.icon.dark
   })
 </script>
 ```

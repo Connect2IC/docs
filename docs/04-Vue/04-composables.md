@@ -7,6 +7,7 @@ Gives you access to many things like the status of the connection, which provide
 ### Usage
 
 ```html
+
 <script setup>
   import { useConnect } from "@connect2ic/vue"
 
@@ -14,6 +15,8 @@ Gives you access to many things like the status of the connection, which provide
     principal,
     connect,
     disconnect,
+    status,
+    isInitializing,
     isIdle,
     isConnecting,
     isConnected,
@@ -36,16 +39,22 @@ Gives you access to many things like the status of the connection, which provide
   // disconnect
   disconnect()
 
-  // Ref<boolean>
+  // "initializing" | "idle" | "connecting" | "connected" | "disconnecting"
+  status.value
+
+  // boolean
+  isInitializing.value
+
+  // boolean
   isIdle.value
 
   // TODO
   isConnecting.value
 
-  // Ref<boolean>
+  // boolean
   isConnected.value
 
-  // Ref<boolean>
+  // boolean
   isDisconnecting.value
 
   // Provider
@@ -60,6 +69,7 @@ Automatically switches between the anonymous & connected identity for the canist
 ### Usage
 
 ```html
+
 <script setup>
   import { useCanister } from "@connect2ic/vue"
 
@@ -68,7 +78,7 @@ Automatically switches between the anonymous & connected identity for the canist
   // Make calls to the canister as you would normally
   counter.value.increment()
 
-  // Ref<boolean>
+  // boolean
   loading.value
 
   // TODO
@@ -98,7 +108,7 @@ Programmatically control the prestyled `<Dialog />` or check its state.
   // closes the dialog
   close()
 
-  // Ref<boolean>
+  // boolean
   isOpen.value
 </script>
 ```
@@ -110,12 +120,13 @@ Wallet info and addresses.
 ### Usage
 
 ```html
+
 <script setup>
   import { useWallet } from "@connect2ic/vue"
 
   const [wallet] = useWallet()
 
-  // Ref<wallet>
+  // wallet
   wallet.value
 
   // string
@@ -130,12 +141,13 @@ Provides you with a list of the users assets when a wallet is connected.
 ### Usage
 
 ```html
+
 <script setup>
   import { useBalance } from "@connect2ic/vue"
 
-  const [assets] = useBalance()
+  const [assets, { refetch, error }] = useBalance()
 
-  // Ref<assets> | undefined
+  // assets | undefined
   assets.value.map(asset => {
     // string
     asset.canisterId
@@ -146,6 +158,12 @@ Provides you with a list of the users assets when a wallet is connected.
     // number
     asset.amount
   })
+
+  // refetch the balance
+  refetch()
+
+  // Error
+  error.value
 </script>
 ```
 
@@ -156,25 +174,26 @@ Gives you direct access to the providers, when you need more control.
 ### Usage
 
 ```html
+
 <script setup>
   import { useProviders } from "@connect2ic/vue"
 
   const [providers] = useProviders()
 
-  // Ref<Array<Provider>>
+  // Array<Provider>
   providers.value?.map(provider => {
+    // Provider
+    provider
+    
     // string
-    provider.id
+    provider.meta.id
 
     // string
-    provider.name
+    provider.meta.name
 
     // <img /> src string
-    provider.icon.light
-    provider.icon.dark
-
-    // Connector
-    provider.connector
+    provider.meta.icon.light
+    provider.meta.icon.dark
   })
 </script>
 ```

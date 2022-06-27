@@ -7,7 +7,13 @@ such as `useProviders` and `useConnect` that the library ships with.
 ## I want to add support for my own provider
 See how the other providers are implemented and pass it in:
 
-`<Connect2ICProvider providers={[myCustomProvider]} />`
+```ts
+import { createClient } from "@connect2ic/core"
+
+const client = createClient({
+  providers: [new MyProvider()]
+})
+```
 
 ## I dont want the canister calls to be authenticated
 See the `{ mode: "anonymous" }` option for the `useCanister` hook
