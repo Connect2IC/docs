@@ -58,7 +58,7 @@ const provider = new InternetIdentity({
 ```ts
 import { NFID } from "@connect2ic/core/providers/nfid"
 
-const provider = new AstroX({
+const provider = new NFID({
   // boolean
   dev: true,
   // The app name
